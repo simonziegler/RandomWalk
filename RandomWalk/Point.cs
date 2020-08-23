@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RandomWalk
 {
@@ -14,6 +10,8 @@ namespace RandomWalk
         public double R { get; private set; }
         public double Theta { get; private set; }
         public double Phi { get; private set; }
+
+        public Point Add(Point point) => Cartesian(X + point.X, Y + point.Y, Z + point.Z);
 
         public static Point Cartesian(double x, double y, double z)
         {
